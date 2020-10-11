@@ -47,5 +47,44 @@ public class Main {
 
         int minimale_summe = myArray.minimale_summe(arr);
         System.out.println(minimale_summe);
+        
+        //problemele 3 si 4
+        int[] a={8,7,0,0,0,0,0,0,0};
+        int[] b={1,3,0,0,0,0,0,0,0};
+        int[] rez=new int[100];
+        int r;
+
+        //3.1
+        rez=com.company.U3.sum(a,b);
+        System.out.println(Arrays.toString(rez));
+
+        //3.2
+        rez=com.company.U3.diff(a,b);
+        System.out.println(Arrays.toString(rez));
+
+        //3.3
+        rez=com.company.U3.mul(a,7);
+        System.out.println(Arrays.toString(rez));
+
+        //3.4
+        int[] c={8,7,0,0,0,0,0,0,0};
+        rez=com.company.U3.div(c,2);
+        System.out.println(Arrays.toString(rez));
+
+        //4.1
+        r=com.company.U4.cheapkeyboard();
+        System.out.println(r);
+
+        //4.2
+        r=com.company.U4.mostexpensive();
+        System.out.println(r);
+
+        //4.3
+        r=com.company.U4.affordable(30);
+        System.out.println(r);
+
+        //4.4
+        r=com.company.U4.buy(63);
+        System.out.println(r);
     }
 }
