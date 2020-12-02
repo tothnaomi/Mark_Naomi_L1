@@ -1,7 +1,10 @@
 public class myArray {
 
+    /**
+     * @param inputArray is an array with numbers
+     * @return the maximum element from the given array
+     */
     public static int findMaximum (int[] inputArray) {
-        // findet die maximale Wert in einem Array
 
         int maximum = inputArray[0];
         for(int elem: inputArray) {
@@ -10,8 +13,12 @@ public class myArray {
         return maximum;
     }
 
+    /**
+     *
+     * @param inputArray is an array with numbers
+     * @return the minimum element from the given array
+     */
     public static int findMinimum (int[] inputArray) {
-        // findet die minimale Wert in einem Array
 
         int minimum = inputArray[0];
         for(int elem: inputArray) {
@@ -20,9 +27,12 @@ public class myArray {
         return minimum;
     }
 
+    /**
+     * @param inputArray is an array with numbers
+     * @return maximum sum of n-1 numbers
+     * we are seaching for the minimum element and we substract it from the sum
+     */
     public static int maximale_summe (int[] inputArray) {
-        // findet die maximale Summe von n-1 Zahlen
-        // wir finden die minimale Wert und wir substrahieren es von die Summe
 
         int minimum = findMinimum(inputArray);
         int summe = 0;
@@ -33,6 +43,12 @@ public class myArray {
         return summe;
     }
 
+    /**
+     *
+     * @param inputArray is an array with numbers
+     * @return minimum sum of n-1 numbers
+     * we are seaching for the maximum element and we substract it from the sum
+     */
     public static int minimale_summe (int[] inputArray){
         // findet die minimale Summe von n-1 Zahlen
         // wir finden die maximale Wert und wir substrahieren es von die Summe

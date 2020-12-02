@@ -1,28 +1,44 @@
 public class Noten {
 
-    public static int runden(int Note) {
+    /**
+     *
+     * @param note is an integer
+     * @return the rounded grade
+     * if the difference between the grade and the next multiple of 5 is less than 3 than the grade will be rounded to the multiple of 5
+     */
+    public static int runden(int note) {
         // Ob die Differenz zwischen die Note und die nächste multipel von 5 weniger als 3
         // ist, dann wird die Note zu die nächste multipel von 5 abgerunde
         // Ob die Note kleiner als 38 ist, wird die Note nicht abgerundet.
 
-        if (Note > 38) {
-            int multipleVon5 = Note;
+        if (note > 38) {
+            int multipleVon5 = note;
 
             while (multipleVon5 % 5 != 0) {
                 multipleVon5++;
             }
 
-            if (multipleVon5 - Note < 3) {
-                Note = multipleVon5;
+            if (multipleVon5 - note < 3) {
+                note = multipleVon5;
             }
         }
-        return Note;
+        return note;
     }
 
+    /**
+     *
+     * @param Note is an integer
+     * @return true if the note is greater than 40, otherwise return false
+     */
     public static boolean ausreichend(int Note) {
         return Note >= 40;
     }
 
+    /**
+     *
+     * @param noten is an array of integers, which are grades
+     * @return all the grades, which are not sufficient
+     */
     public static int[] nichtAusreichendeNoten(int[] noten) {
         // liefert die Noten die nicht ausreichend sind von dem Array mit Name noten
 
@@ -37,6 +53,11 @@ public class Noten {
         return returnArray;
     }
 
+    /**
+     *
+     * @param noten an array of integers (grades)
+     * @return the durchschnitt
+     */
     public static int Durchschnitt(int[] noten) {
         // Methode bekommt ein Array von Noten
         // Als die Rückgabewert soll die Methode den Durchschnittswert liefern.
@@ -49,9 +70,12 @@ public class Noten {
         return sum/noten.length;
     }
 
+    /**
+     *
+     * @param noten is an array of grades
+     * @return an array with the rounded grades
+     */
     public static int[] rundeteNoten(int[] noten) {
-        // Methode bekommt ein Array von Noten
-        // Als die Rückgabewert soll die Methode eine Array mit die abgerundete Note liefern
 
         int[] newNoten = new int[noten.length];
         for (int i=0;i<noten.length;i++) {
@@ -59,6 +83,21 @@ public class Noten {
             newNoten[i] = new_note;
         }
         return newNoten;
+    }
+
+    public static int[] abgerundeteNoten(int[] noten) {
+        int[] abgerundet = new int[noten.length];
+
+        int n=0;
+
+        int[] newNoten = rundeteNoten(noten);
+        for(int i:newNoten) System.out.println(i);
+        for (int i=0;i<noten.length;i++) {
+            if (newNoten[i]<noten[i])
+                abgerundet[n] = newNoten[i];
+            n+=1;
+        }
+        return abgerundet;
     }
 
     public static int maximal_abgerundet(int[] noten) {
