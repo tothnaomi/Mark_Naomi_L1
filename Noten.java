@@ -84,21 +84,7 @@ public class Noten {
         }
         return newNoten;
     }
-
-    public static int[] abgerundeteNoten(int[] noten) {
-        int[] abgerundet = new int[noten.length];
-
-        int n=0;
-
-        int[] newNoten = rundeteNoten(noten);
-        for(int i:newNoten) System.out.println(i);
-        for (int i=0;i<noten.length;i++) {
-            if (newNoten[i]<noten[i])
-                abgerundet[n] = newNoten[i];
-            n+=1;
-        }
-        return abgerundet;
-    }
+    
 
     public static int maximal_abgerundet(int[] noten) {
         int[] newNoten = rundeteNoten(noten);
