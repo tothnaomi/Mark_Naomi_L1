@@ -1,7 +1,7 @@
-package com.company;
+
 
 public class U3 {
-    static int[] sum(int[] a, int[] b) {
+    public static int[] sum(int[] a, int[] b) {
         int[] c;
         int rest = 0,n=a.length;
         c = new int[n + 1];
